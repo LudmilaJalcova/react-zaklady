@@ -1,0 +1,28 @@
+vytvor si repositar s nazvom react-example-props
+vyklonuj si ho 
+nasledne v nom si vytvor priecinok docs
+naimportuj si do head
+<!-- import React knižnice -->
+<script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+<script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+<!-- import babel knižnice ktorá dokaže integrovať jsx zapis  -->
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+nasledne si v body nalinkuj main.jsx subor ktori si vytvoris
+<script type="text/babel" src="./main.jsx"></script>
+nad to vlozim div s id root
+
+
+vytvor si komponentu s nazvom Title ktora bude vraciat h1 element s textom Moj title
+vytvor si komponentu s nazvom Description ktora bude vraciat p element s textom Moj description
+vytvor si komponentu s nazvom Button ktora bude vraciat button element s textom Moj button
+vytvor si komponentu s nazvom Content ktora bude vraciat div element s textom Moj content
+
+vytvor komponentu s nazvom Wrapper ta bude vraciat div element v ktorom bude komponenta Title, Description, Button, Content
+
+v jsx subore si pommocou ReactDOM.render() vloz do selektnuteho divka pomocou id svoju komponentu Wrapper
+
+ak to budes mat pokus sa prepojit text Moj ... pomocou props a atributu ktori bude zaslany z Wrapperu
+<Wrapper title="Moj title" description="Moj description" button="Moj button" content="Moj content" />
+pride ti do Wrapper komponenty props ktoru bude preposielat dalej ako atributy do jednotlivych komponent ktore to zase nacitaju ako props
+napr. <h1>{props.title}</h1>
